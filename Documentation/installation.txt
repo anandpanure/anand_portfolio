@@ -1,0 +1,5 @@
+npm install -g @sanity/cli
+sanity init --coupon javascriptmastery2022    
+
+
+npx create-react-app frontent_react
