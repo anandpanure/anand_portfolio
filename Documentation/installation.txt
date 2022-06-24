@@ -3,3 +3,10 @@ sanity init --coupon javascriptmastery2022
 
 
 npx create-react-app frontent_react
+
+
+Connecting React to Sanity Client
+cd backend_sanity
+sanity manage
+// a portal will open up with all the details like project id , etc
+// Add http://localhost:3000/ to Cors origin under APi on the portal
