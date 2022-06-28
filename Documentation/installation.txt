@@ -10,3 +10,7 @@ cd backend_sanity
 sanity manage
 // a portal will open up with all the details like project id , etc
 // Add http://localhost:3000/ to Cors origin under APi on the portal
+
+
+cd frontent_react
+npm install react-tooltip
