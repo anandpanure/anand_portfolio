@@ -1,12 +1,12 @@
-.app__testimonial {
+.app__recommendation {
     flex: 1;
     width: 100%;
     flex-direction: column;
   }
   
-  .app__testimonial-item {
+  .app__recommendation-item {
     width: 80%;
-    min-height: 400px;
+    min-height: 560px;
     background-color: var(--white-color);
     display: flex;
     flex-direction: row;
@@ -41,7 +41,7 @@
     }
   }
   
-  .app__testimonial-content {
+  .app__recommendation-content {
     flex: 1;
     height: 100%;
     padding: 0 2rem;
@@ -52,7 +52,7 @@
     justify-content: space-around;
     align-items: flex-start;
   
-    p {
+    .app__recommendation-feeback {
       font-size: 1.25rem;
       line-height: 2rem;
       color: var(--black-color);
@@ -82,7 +82,7 @@
     }
   }
   
-  .app__testimonial-btns {
+  .app__recommendation-btns {
     flex-direction: row;
     margin-top: 1rem;
   

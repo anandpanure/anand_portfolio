@@ -1,6 +1,6 @@
 export default {
-    name: 'testimonials',
-    title: 'Testimonials',
+    name: 'recommendations',
+    title: 'Recommendations',
     type: 'document',
     fields:[
         {
@@ -24,7 +24,8 @@ export default {
         {
             name: 'feedback',
             title: 'Feedback',
-            type: 'text'
+            type: 'array', 
+            of: [{type: 'block'}]
         }
     ]
 }

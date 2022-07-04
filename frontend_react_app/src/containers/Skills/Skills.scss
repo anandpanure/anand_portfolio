@@ -82,7 +82,7 @@
   }
   
   .app__skills-exp {
-    flex: 1;
+    flex: 2;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -90,6 +90,7 @@
   
     @media screen and (max-width: 900px) {
       margin-top: 2rem;
+
     }
   }
   
@@ -100,6 +101,11 @@
     justify-content: flex-start;
     align-items: flex-start;
     margin: 1rem 0;
+
+    @media screen and (max-width: 900px){
+      flex-direction: column;
+      width: 100%;
+    }
   }
   
   .app__skills-exp-works {

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import ReactTooltip from 'react-tooltip';
+import { PortableText} from '@portabletext/react'
 
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
@@ -11,7 +12,7 @@ const Skills = () => {
   const [skills, setSkills] = useState([]);
 
   useEffect(() => {
-    const query = '*[_type == "experiences"]';
+    const query = '*[_type == "industryExperience"]';
     const skillsQuery = '*[_type == "skills"]';
 
     client.fetch(query).then((data) => {
@@ -56,35 +57,31 @@ const Skills = () => {
                 <p className="bold-text">{experience.year}</p>
               </div>
               <motion.div className="app__skills-exp-works">
-                {experience.works.map((work) => (
+                <p className="p-text">{experience.company}</p>
+                {experience.positions.map((position) => (
                   <>
                     <motion.div
                       whileInView={{ opacity: [0, 1] }}
                       transition={{ duration: 0.5 }}
                       className="app__skills-exp-work"
                       data-tip
-                      data-for={work.name}
-                      key={work.name}
+                      data-for={position.title}
+                      key={position.title}
                     >
-                      <h4 className="bold-text">{work.name}</h4>
-                      <p className="p-text">{work.company}</p>
+                      <h4 className="bold-text">{position.title}</h4>
+                      
                     </motion.div>
                     <motion.div
                     whileInView={ { opacity: [0,1]}}
                     transition={{duration:0.5}}
                     className="app__skills-description"
                     >
-                      <p>{work.desc}</p>
-                    </motion.div>
-                    
-                    {/*<ReactTooltip
-                      id={work.name}
-                      effect="solid"
-                      arrowColor="#fff"
-                      className="skills-tooltip"
-                    >
-                      {work.desc}
-                    </ReactTooltip>*/}
+                      <div className="app__descdd">
+                        <PortableText
+                          value={position.description}
+                          />
+                      </div>
+                    </motion.div>                 
                   </>
                 ))}
               </motion.div>

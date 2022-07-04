@@ -4,6 +4,9 @@ sanity init --coupon javascriptmastery2022
 
 npx create-react-app frontent_react
 
+cd frontent_react
+npm install @portabletext/react
+
 
 Connecting React to Sanity Client
 cd backend_sanity
